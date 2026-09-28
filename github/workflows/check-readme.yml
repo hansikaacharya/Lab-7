@@ -1,0 +1,6 @@
+name: check READMEon: pull_request: branches: | main |jobs: 
+check-readme: runs-on: ubuntu-latest steps: -users:
+actions/checkout@v4 -name: verify README exists and is non- 
+empty run: | if [ ! -s README.md ]; then
+echo "README.md is missing or empty!"
+echo "README.md check passed."
